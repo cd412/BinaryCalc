@@ -4,6 +4,10 @@ public class Lamp {
 	private static final boolean OFF = false;
 	private boolean light = ON ;
 	
+	public Lamp() {
+		setLightOff();
+	}
+	
 	public void setLightOn() {
 		this.light = ON;
 	}
@@ -14,5 +18,13 @@ public class Lamp {
 	
 	public boolean getLight() {
 		return this.light;
+	}
+	
+	public String toString() {
+		if (this.light) {
+			return "on  ";
+		} else {
+			return "off ";
+		}
 	}
 }
